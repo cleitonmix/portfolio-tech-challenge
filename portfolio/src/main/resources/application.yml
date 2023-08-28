@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5433/portfolio
+    username: portfolio
+    password: password
+
+  flyway:
+    user: portfolio
+    password: password
+    locations: db/migration/postgresql
+client:
+  person:
+    list-url: "http://localhost:8080/v1/person?employee=true"
+    get-url: "http://localhost:8080/v1/person/"

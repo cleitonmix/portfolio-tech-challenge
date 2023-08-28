@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pessoa
+    username: pessoa
+    password: password
+
+  flyway:
+    user: pessoa
+    password: password
+    locations: db/migration/postgresql
